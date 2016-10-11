@@ -8,7 +8,6 @@
  * * @history
  * */
 #include "_BflvMuxer.h"
-#include "mylog.h"
 
 namespace Bepartofyou{
 
