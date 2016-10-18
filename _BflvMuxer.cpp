@@ -36,6 +36,11 @@ namespace Bepartofyou{
 		m_bFlag = false;
 		m_uFirstTs = 0;
 		m_uLastTs = 0;
+
+		m_bHeaderOK = false;
+		m_bMetaDataOK = false;
+		m_bAudioSequenceHeaderOK = false;
+		m_bVideoSequenceHeaderOK = false;
 	}
 
 	CFlvMuxer::~CFlvMuxer()
