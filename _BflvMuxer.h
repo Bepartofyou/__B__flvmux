@@ -1,8 +1,4 @@
 /*
- * *Copyright(c) 2015-2016 Beijing Youbeizaixian Network technology co., LTD 
- * *
- * *Authored by Bepartofyou on: Sun Sep 18 17:30:14 CST 2016
- * *
  * * @desc: 使用方法
  * *  1、写文件           CFlvMuxer flvmuxer("test.flv"); 
  * *			         flvmuxer.write_av_data(uint8_t *pData, uint32_t size, uint32_t dts, bool bAudio); 

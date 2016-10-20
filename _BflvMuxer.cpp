@@ -1,12 +1,3 @@
-/*
- * *Copyright(c) 2015-2016 Beijing Youbeizaixian Network technology co., LTD 
- * *
- * *Authored by Bepartofyou on: Sun Sep 18 17:30:19 CST 2016
- * *
- * * @desc:
- * *
- * * @history
- * */
 #include "_BflvMuxer.h"
 
 namespace Bepartofyou{
@@ -114,7 +105,7 @@ namespace Bepartofyou{
 
 		p = put_amf_string(p, "company");
 		p = put_byte(p, VV_AMF_STRING);
-		p = put_amf_string(p, "Beijing Youbeizaixian Network technology co., LTD");
+		p = put_amf_string(p, "Beijing  Network technology co., LTD");
 
 		p = put_amf_string(p, "duration");
 		p = put_amf_double(p, (m_uLastTs - m_uFirstTs) / 1000);

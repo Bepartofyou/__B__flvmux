@@ -1,12 +1,3 @@
-/*
- * *Copyright(c) 2015-2016 Beijing Youbeizaixian Network technology co., LTD 
- * *
- * *Authored by Bepartofyou on: Sun Sep 18 17:52:00 CST 2016
- * *
- * * @desc:
- * *
- * * @history
- * */
 #ifndef _Bepartofyou_AUDIO_CONFIG_PARSE_H_
 #define _Bepartofyou_AUDIO_CONFIG_PARSE_H_
 
