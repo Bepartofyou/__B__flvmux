@@ -170,8 +170,10 @@ namespace Bepartofyou{
 		{
 			//return;
 			//在第一个IDR到来之前,前面的PB帧都丢掉
-			if (!m_cVideoConfigInfo.IsAvcKeyframe(pData, size))
+			if (!m_cVideoConfigInfo.IsAvcKeyframe(pData, size)){
+				Tagsize = 0;
 				return;
+			}
 
 			write_video_header(pData, size);
 			m_bVideoSequenceHeaderOK = true;
