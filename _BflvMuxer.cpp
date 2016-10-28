@@ -149,6 +149,12 @@ namespace Bepartofyou{
 
 	void CFlvMuxer::write_av_data(uint8_t *pData, uint32_t size, uint32_t dts, bool bAudio, uint8_t *pTagData, uint32_t &Tagsize)
 	{
+		if(!pData || !size || !pTagData)
+		{
+			Tagsize = 0;
+			return;
+		}
+
 		if (0 != m_uDataBufLen)
 			printf("CFlvMuxer::write_av_data() m_uDataBufLen:%u \n", m_uDataBufLen);
 		if (size > MAX_FLV_DATA_BUFFER)
@@ -212,6 +218,9 @@ namespace Bepartofyou{
 
 	void CFlvMuxer::write_av_data(uint8_t *pData, uint32_t size, uint32_t dts, bool bAudio)
 	{
+		if(!pData || !size)
+			return;
+
 		//record timestamp 
 		m_uLastTs = dts;
 		if (!m_bFlag)
