@@ -149,6 +149,11 @@ namespace Bepartofyou{
 
 	void CFlvMuxer::write_av_data(uint8_t *pData, uint32_t size, uint32_t dts, bool bAudio, uint8_t *pTagData, uint32_t &Tagsize)
 	{
+		if (0 != m_uDataBufLen)
+			printf("CFlvMuxer::write_av_data() m_uDataBufLen:%u \n", m_uDataBufLen);
+		if (size > MAX_FLV_DATA_BUFFER)
+			printf("CFlvMuxer::write_av_data() size:%u > MAX_FLV_DATA_BUFFER:%u \n", size, MAX_FLV_DATA_BUFFER);
+
 		//flv header
 		if (!m_bHeaderOK) {
 			write_headers();
@@ -495,7 +500,8 @@ namespace Bepartofyou{
 		}
 		else
 		{
-			printf("CFlvMuxer::s_write() memory is not enough !!!");
+			printf("CFlvMuxer::s_write() memory is not enough !!! tmp:%p tmpsize:%u pData:%p size:%u flag:%d leftsize:%u m_uDataBufLen:%u \n",
+									tmp, tmpsize, pData, size, flag, MAX_FLV_DATA_BUFFER - tmpsize, m_uDataBufLen);
 			return 0;
 		}
 	}
